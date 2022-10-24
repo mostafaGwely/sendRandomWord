@@ -22,7 +22,7 @@ public class DemoApplication {
 	static PushNotificationRequest h = new PushNotificationRequest();
 	public static void main(String[] args) throws InterruptedException {
 		SpringApplication.run(DemoApplication.class, args);
-		h.setToken("c8H3GzknSRmm0MfISfIIkg:APA91bH88_5maiHVGWQLurW5Pqc7iogiFqdgaohmwt0Vz5_Mvo0oRvmfHlIs0YtA-0IEIOClWOYg69PMWxDHAPTS13Dy7Z-I-b-bojM1v6bLZ8yXXluSWcPp39ffzt2XPT5lu9jhSjuu");
+		h.setToken("ccgDv7d7S3yMJ69H9kfLal:APA91bH51PQoV3cEablSTt5a_RzqcsGhGBMaBdrToQ2wKxs76TB1kRRVbUIMgeulrTco6D7c5WcowiPLbJlwxA7V76Y-ikAiF1jDA_kkkFMkYuKCwpsOdwroMGVPgMIkpBUZnjrtKz_8");
 
 
 		//getRandomWord();
