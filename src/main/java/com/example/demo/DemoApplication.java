@@ -30,7 +30,7 @@ public class DemoApplication {
 		while (true){
 
 			getRandomWord();
-			Thread.sleep(1000 * 60);
+			Thread.sleep(1000 * 60 * 60);
 		}
 
 
