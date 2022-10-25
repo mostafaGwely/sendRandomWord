@@ -22,7 +22,7 @@ public class ClassConfig {
     static PushNotificationController x = new PushNotificationController(y);
     static PushNotificationRequest h = new PushNotificationRequest();
 
-    @Scheduled(fixedDelay = 1000 * 60 )
+    @Scheduled(fixedDelay = 1000 * 60 * 60 )
     public void sendMessage(){
 //        System.out.println("hello");
         h.setToken("ccgDv7d7S3yMJ69H9kfLal:APA91bH51PQoV3cEablSTt5a_RzqcsGhGBMaBdrToQ2wKxs76TB1kRRVbUIMgeulrTco6D7c5WcowiPLbJlwxA7V76Y-ikAiF1jDA_kkkFMkYuKCwpsOdwroMGVPgMIkpBUZnjrtKz_8");
