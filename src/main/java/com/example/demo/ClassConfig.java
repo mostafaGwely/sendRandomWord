@@ -30,7 +30,7 @@ public class ClassConfig {
         h.setToken("ccgDv7d7S3yMJ69H9kfLal:APA91bH51PQoV3cEablSTt5a_RzqcsGhGBMaBdrToQ2wKxs76TB1kRRVbUIMgeulrTco6D7c5WcowiPLbJlwxA7V76Y-ikAiF1jDA_kkkFMkYuKCwpsOdwroMGVPgMIkpBUZnjrtKz_8");
         firstTime = true;
         getRandomWord();
-        Thread.sleep(1000 * 10);
+        Thread.sleep(1000 * 60);
         firstTime = false;
         getRandomWord();
 

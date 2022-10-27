@@ -41,6 +41,7 @@ public class FCMService {
         logger.info("Sent message to token. Device token: " + request.getToken() + ", " + response+ " msg "+jsonOutput);
     }
     private String sendAndGetResponse(Message message) throws InterruptedException, ExecutionException {
+
         return FirebaseMessaging.getInstance().sendAsync(message).get();
     }
     private AndroidConfig getAndroidConfig(String topic) {
