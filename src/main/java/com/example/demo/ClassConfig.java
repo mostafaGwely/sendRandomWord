@@ -23,12 +23,17 @@ public class ClassConfig {
     static PushNotificationService y = new PushNotificationService(z);
     static PushNotificationController x = new PushNotificationController(y);
     static PushNotificationRequest h = new PushNotificationRequest();
-
+    private static boolean firstTime = true;
     @Scheduled(fixedDelay = 1000 * 60 * 60 )
-    public void sendMessage(){
+    public void sendMessage() throws InterruptedException {
 //        System.out.println("hello");
         h.setToken("ccgDv7d7S3yMJ69H9kfLal:APA91bH51PQoV3cEablSTt5a_RzqcsGhGBMaBdrToQ2wKxs76TB1kRRVbUIMgeulrTco6D7c5WcowiPLbJlwxA7V76Y-ikAiF1jDA_kkkFMkYuKCwpsOdwroMGVPgMIkpBUZnjrtKz_8");
+        firstTime = true;
         getRandomWord();
+        Thread.sleep(1000 * 10);
+        firstTime = false;
+        getRandomWord();
+
 
     }
 
@@ -54,7 +59,8 @@ public class ClassConfig {
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 h.setTitle("Error: request faild");
                 h.setMessage(e.getMessage());
-                x.sendTokenNotification(h);
+                if (!firstTime)
+                    x.sendTokenNotification(h);
             }
 
             @Override
@@ -71,12 +77,14 @@ public class ClassConfig {
 
                     h.setTitle(title);
                     h.setMessage(content);
-                    x.sendTokenNotification(h);
+                    if (!firstTime)
+                        x.sendTokenNotification(h);
 
                 } catch (JSONException e) {
                     h.setTitle("Error: onResponse");
                     h.setMessage(e.getMessage());
-                    x.sendTokenNotification(h);
+                    if (!firstTime)
+                        x.sendTokenNotification(h);
                 }
 
 
